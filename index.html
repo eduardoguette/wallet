@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gasto Semanal</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link href='./css/box-icons.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="./img/wallet.svg" alt="logo" height="40" width="40">
+      <li class="nav-option" id="nav-new-account">
+        Crear cuenta
+      </li>
+    </nav>
+    <nav class="user-and-more">
+      <li><button class="more-record">
+          <img src="./img/plus-icon.svg" alt="plus-icon" height="10">
+          <span>
+            Registro
+          </span>
+        </button></li>
+      <li>
+        <div class="user">
+          <div class="user-img"></div>
+          <div class="user-name">Eduardo Guette
+            <img src="./img/care-down.svg" alt="down">
+          </div>
+          <ul class="nav-user">
+            <li><button>Cuentas</button></li>
+            <li><button>Salir</button></li>
+          </ul>
+        </div>
+      </li>
+    </nav>
+  </header>
+  <main>
+    <section class="account">
+
+    </section>
+    <section class="balance">
+      <div class="balance-container">
+        <div class="tool-tip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, .6);transform:;-ms-filter:"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8s3.589-8,8-8 s8,3.589,8,8S16.411,20,12,20z"></path><path d="M11 11H13V17H11zM11 7H13V9H11z"></path></svg>
+          <div class="mensaje-tool-tip">
+            <p>Has gastado el 25% del presupuesto</p>
+          </div>
+        </div>
+        <p>Tu saldo restante es: </p>
+        <h1 class="balance-value"></h1>
+       <!--  <select name="type" id="type">
+          <option value="1">EUR</option>
+          <option value="1">USD</option>
+          <option value="1">MXN</option>
+          <option value="1">CAD</option>
+        </select> -->
+
+      </div>
+    </section>
+
+    <section class="last-records">
+      <div class="last-records-container">
+        <div class="last-records-header">
+          <div class="header-title">Últimos registros</div>
+          <button class="records">Registros</button>
+        </div>
+        <div class="records-list" id="records">
+          
+        </div>
+      </div>
+    </section>
+    <section class="account-config">
+      <div class="account-config-container">
+        <div class="account-config-header">
+          <p>
+            Nueva cuenta
+          </p>
+          <button class="btn-close close-config-account">&times;</button>
+        </div>
+        <div class="account-config-body">
+          <form id="form-wallet">
+            <div class="row">
+              <div class="form-control">
+                <label class="bold" for="name">Nombre</label>
+                <input type="text" id="name">
+              </div>
+              <div class="color-account form-control">
+                <label class="bold" for="color-selected">Color</label>
+                <div class="color-selected">
+                  <div class="selected">
+                    <div class="pallete"></div>
+                  </div>
+                  <img src="./img/care-down.svg" alt="down" height="20">
+                </div>
+              </div>
+            </div>
+            <div class="form-control">
+              <label class="bold" for="type-account">Tipo de cuenta</label>
+              <div id="type-account" class="type-account">
+                <div class="type-selected">
+                  <div class="type-img">
+                    <img src="./img/general.svg" alt="general" alt="general" height="12">
+                  </div>
+                  General
+                </div>
+                <img src="./img/care-down.svg" alt="down" height="20">
+                <div class="nav-type-account">
+                  <div class="option">
+                    <div class="type-img">
+                      <img src="./img/general.svg" alt="general" alt="general" height="12">
+                    </div>
+                    General
+                  </div>
+                  <div class="option">
+                    <div class="type-img">
+                      <img src="./img/cash.svg" alt="general" alt="general" height="12">
+                    </div>Efectivo
+                  </div>
+                  <div class="option">
+                    <div class="type-img">
+                      <img src="./img/credit-card.svg" alt="general" alt="general" height="12">
+                    </div>Credit Card​​
+                  </div>
+                  <div class="option">
+                    <div class="type-img">
+                      <img src="./img/current-account.svg" alt="general" alt="general" height="12">
+                    </div>Cuenta de ahorro
+                  </div>
+                  <div class="option">
+                    <div class="type-img">
+                      <img src="./img/loan.svg" alt="general" alt="general" height="12">
+                    </div>Prestamo
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-control">
+                <label class="bold" for="staring-amount">Cantidad</label>
+                <input type="text" id="staring-amount">
+              </div>
+              <div class="container-currency form-control">
+                <label class="bold" for="currency">Moneda</label>
+                <div class="currency">
+                  <div class="selected">
+                    EUR
+                  </div>
+                  <img src="./img/care-down.svg" alt="down" height="20">
+                  <div class="nav-currency">
+                    <div class="option"> EUR</div>
+                    <div class="option"> USD</div>
+                    <div class="option"> BS.​​</div>
+                    <div class="option"> MXN</div>
+                    <div class="option"> CAD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-wallet-buttons" id="register-account">
+              <button type="submit">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+   
+
+    <section class="new-record">
+      <div class="new-record-container">
+        <div class="new-record-header">
+          <p>
+            Agregar registro
+
+          </p>
+          <button class="btn-close close-new-record">&times;</button>
+        </div>
+        <div class="new-record-body">
+          <nav class="type-record">
+            <li>
+              Gasto
+            </li>
+            <!-- <li>
+              Ingreso
+            </li> -->
+          </nav>
+          <div class="new-record-form">
+            <form id="new-record">
+             
+              <div class="form-control ammount">
+                <label for="acount">Cantidad</label>
+                <input type="text" id="ammount">
+              </div>
+              
+              <div class="form-control category">
+                <label for="category">Categoría</label>
+                <div id="category">
+                  <div class="selected-category d-flex justify-content-between align-items-center border">
+                    <div class="selected">
+                      <li class="option-selected d-flex justify-content-between align-items-center">
+                        <div class="category-img comida">
+                          <img src="./img/restaurant.svg" alt="restaurant"  height="18">
+                        </div>
+                        <div class="text-category">Comida</div>
+                      </li>
+                    </div>
+                    <img src="./img/care-down.svg" alt="down" height="20">
+                  </div>
+                  <ul class="nav-category">
+                    <li>
+                      <div class="category-img comida">
+                        <img src="./img/restaurant.svg" alt="restaurant"  height="18">
+                      </div>
+                      <div class="text-category">Comida</div>
+                    </li>
+                    <li>
+                      <div class="category-img compras">
+                        <img src="./img/shopping.svg" alt="restaurant" height="18">
+                      </div>
+                      <div class="text-category">Compras</div>
+                    </li>
+                    <li>
+                      <div class="category-img house">
+                        <img src="./img/house.svg" alt="House" height="18">
+                      </div>
+                      <div class="text-category">House</div>
+                    </li>
+                    <li>
+                      <div class="category-img transporte">
+                        <img src="./img/transport.svg" alt="Transporte" height="18">
+                      </div>
+                      <div class="text-category">Transporte</div>
+                    </li>
+                    <li>
+                      <div class="category-img entretenimiento">
+                        <img src="./img/entretenimient.svg" alt="Entretenimiento" height="18">
+                      </div>
+                      <div class="text-category">Entretenimiento</div>
+                    </li>
+                    <li>
+                      <div class="category-img ingreso">
+                        <img src="./img/income.svg" alt="Ingreso" height="18">
+                      </div>
+                      <div class="text-category">Ingreso</div>
+                    </li>
+                    <li>
+                      <div class="category-img otros">
+                        <img src="./img/hamburguer-menu.svg" alt="otro" height="18">
+                      </div>
+                      <div class="text-category">Otros</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-control description">
+                <label for="description">Beneficiario</label>
+                <input type="text" id="description">
+              </div>
+              
+              <div class="form-wallet-buttons" id="btn-new-record">
+                <button>Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="spinner hidden">
+      <div class="loading">
+        <div class="ball"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>
+      by Eduardo Guette
+    </p>
+  </footer>
+  <script src="./node_modules/dayjs/dayjs.min.js"></script>
+
+  <script src="./js/interfaz.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
